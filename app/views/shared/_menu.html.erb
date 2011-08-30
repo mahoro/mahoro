@@ -1,0 +1,24 @@
+<%
+  # Collect the root items.
+  # Refinery::Menu is smart enough to remember all of the items in the original collection.
+  if (roots = local_assigns[:roots] || (collection ||= @menu_pages).roots).present?
+    dom_id ||= 'menu'
+    css = [(css || 'menu'), 'clearfix'].flatten.join(' ')
+    hide_children = RefinerySetting.find_or_set(:menu_hide_children, false) if hide_children.nil?
+-%>
+<nav id='<%= dom_id %>' class='<%= css %>'>
+<div id="nav">
+  <%= link_to image_tag("rss.jpg"), "/rss" %>
+  <%= link_to image_tag("twitter.jpg"), "http://twitter.com/#!/mahoro_org", :target => "_blank" %>
+  <ul>
+    <%= render :partial => '/shared/menu_branch', :collection => roots,
+               :locals => {
+                 :hide_children => hide_children,
+                 :sibling_count => (roots.length - 1),
+                 :apply_css => true #if you don't care about class='first' class='last' or class='selected' set apply_css to false for speed.
+               } -%>
+  </ul>
+</div>
+</nav>
+<br class="clear"/>
+<% end -%>

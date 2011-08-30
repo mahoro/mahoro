@@ -1,0 +1,99 @@
+
+body, form, img {
+  margin:  0;
+  padding: 0;
+}
+
+body {
+  background-color: #ddd;
+  font-family:      Helvetica, sans-serif;
+  font-weight:      lighter;
+  font-size:        100%;
+}
+
+a {
+  text-decoration: none;
+  border: 0;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.clear {
+  clear: both
+}
+
+#canvas {
+  box-shadow:         2px 3px 3px 1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 2px 3px 3px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow:    2px 3px 3px 1px rgba(0, 0, 0, 0.3);
+
+  background-color: #fff;
+  background: url(../images/bg.png) bottom left #fff;
+  background-repeat: no-repeat;
+  width:            820px;
+  margin:           0 auto;
+  margin-bottom:    30px;
+  padding:          20px 40px 10px 40px;
+  margin-top:       -5px;
+}
+
+#header {
+  height:        74px;
+  border-bottom: 3px solid #000;
+}
+
+#footer {
+  margin-top: 10px;
+  font-size: 0.7em;
+  text-align: center;
+}
+
+#logo {
+  float:         left;
+}
+
+#nav {
+  position: relative;
+  top:      50px;
+}
+
+#nav ul {
+  float:      right;
+  list-style: none;
+  padding:    0;
+  margin:     0;
+}
+
+#nav li a {
+  color:            #777;
+  background-color: none;
+  line-height:      2em;
+  padding:          10px;
+  font-size:        1em;
+  text-shadow:      0px 1px 0px #e5e5ee;
+  font-weight:      lighter;
+  text-transform:   lowercase
+}
+
+#nav li a:hover, #nav li.selected a {
+  color:            #fff;
+  background-color: #000;
+  line-height:      2em;
+  text-shadow:      none;
+  text-decoration:  none;
+  font-weight:      lighter;
+}
+
+#nav li {
+  float:      left;
+  margin: 0;
+  margin-top: -0.5em;
+}
+
+#nav img {
+  float:       right;
+  margin-left: 7px;
+}
+
