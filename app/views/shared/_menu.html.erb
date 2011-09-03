@@ -8,7 +8,7 @@
 -%>
 <nav id='<%= dom_id %>' class='<%= css %>'>
 <div id="nav">
-  <%= link_to image_tag("rss.jpg"), "/rss" %>
+  <%= link_to image_tag("rss.jpg"), news_items_url(:format => 'rss') %>
   <%= link_to image_tag("facebook.jpg"),
       "http://www.facebook.com/pages/Mahoro-International/140737509343250",
       :target => "_blank" %>
