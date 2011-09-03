@@ -9,7 +9,11 @@
 <nav id='<%= dom_id %>' class='<%= css %>'>
 <div id="nav">
   <%= link_to image_tag("rss.jpg"), "/rss" %>
-  <%= link_to image_tag("twitter.jpg"), "http://twitter.com/#!/mahoro_org", :target => "_blank" %>
+  <%= link_to image_tag("facebook.jpg"),
+      "http://www.facebook.com/pages/Mahoro-International/140737509343250",
+      :target => "_blank" %>
+  <%= link_to image_tag("twitter.jpg"),
+      "http://twitter.com/#!/mahoro_org", :target => "_blank" %>
   <ul>
     <%= render :partial => '/shared/menu_branch', :collection => roots,
                :locals => {
