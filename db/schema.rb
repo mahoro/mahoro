@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110903041250) do
+ActiveRecord::Schema.define(:version => 20111015204014) do
 
   create_table "blog_categories", :force => true do |t|
     t.string   "title"
@@ -197,6 +197,17 @@ ActiveRecord::Schema.define(:version => 20110903041250) do
 
   add_index "seo_meta", ["id"], :name => "index_seo_meta_on_id"
   add_index "seo_meta", ["seo_meta_id", "seo_meta_type"], :name => "index_seo_meta_on_seo_meta_id_and_seo_meta_type"
+
+  create_table "slides", :force => true do |t|
+    t.string   "title"
+    t.integer  "image_id"
+    t.string   "link"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "slides", ["id"], :name => "index_slides_on_id"
 
   create_table "slugs", :force => true do |t|
     t.string   "name"
