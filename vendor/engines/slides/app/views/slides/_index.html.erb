@@ -1,26 +1,40 @@
-<% content_for :body_content_left do %>
-  <ul id="slides">
-    <% @slides.each do |slide| %>
-      <li>
-        <%= link_to slide.title, slide_path(slide) %>
-      </li>
-    <% end %>
-  </ul>
-<% end %>
+<%= stylesheet_link_tag "slides" %>
 
-
-<div id="wowslider-container1">
+<div id="slides">
 	<div class="ws_images">
-    <a href="#"><img src="data1/images/header_bg.jpg" alt="header_bg" title="header_bg" id="wows0"/></a>
-    <a href="#"><img src="data1/images/header.jpg" alt="header" title="header" id="wows1"/></a>
+    <% @slides.each_with_index do |slide, i| %>
+      <%= link_to slide.link,
+                  image_fu(slide.image, "960x360", :id => "wows#{i}") %>
+    <% end %>
   </div>
 
   <div class="ws_bullets">
     <div>
-      <a href="#wows0" title="header_bg"><img src="data1/tooltips/header_bg.jpg" alt="header_bg"/>1</a>
-      <a href="#wows1" title="header"><img src="data1/tooltips/header.jpg" alt="header"/>2</a>
+      <% @slides.each_with_index do |slide, i| %>
+        <%= link_to "#wows#{i}", image_fu(slide.image, "90x90") %>
+      <% end %>
     </div>
   </div>
 	<div class="ws_shadow"></div>
 </div>
-<script type="text/javascript" src="engine1/script.js"></script>
+
+<%= javascript_include_tag "slides" %>
+<% javascript_tag do -%>
+jQuery("#slides").wowSlider({
+  effect:       "stack",
+  prev:         "",
+  next:         "",
+  duration:     10*100,
+  delay:        50*100,
+  outWidth:     960,
+  outHeight:    360,
+  width:        960,
+  height:       360,
+  autoPlay:     true,
+  stopOnHover:  true,
+  loop:         true,
+  bullets:      true,
+  caption:      true,
+  controls:     true
+});
+<% end -%>
