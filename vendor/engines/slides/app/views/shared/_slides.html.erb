@@ -11,10 +11,8 @@
 	<div class="ws_images">
     <% @slides.each_with_index do |slide, i| %>
       <%= link_to image_fu(slide.image,
-                  "#{@setting[:width]}x#{@setting[:height]}",
+                  "#{@setting[:width]}x#{@setting[:height]}#ne",
                   :id     => "wows#{i}",
-                  :width  => @setting[:width],
-                  :height => @setting[:height],
                   :title  => slide.title),
             slide.link %>
     <% end %>
