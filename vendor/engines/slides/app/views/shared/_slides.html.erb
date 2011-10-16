@@ -23,7 +23,7 @@
   <div class="ws_bullets">
     <div>
       <% @slides.each_with_index do |slide, i| %>
-        <%= link_to image_fu(slide.image, "90x90"), "#wows#{i}" %>
+        <%= link_to image_fu(slide.image, "90x90#ne"), "#wows#{i}" %>
       <% end %>
     </div>
   </div>

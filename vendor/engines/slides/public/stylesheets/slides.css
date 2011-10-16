@@ -123,7 +123,7 @@
 }
 
 #slides .ws_bulframe div div{
-	height:90px;
+	/*height:90px;*/
 	overflow:visible;
 	position:relative;
 }
