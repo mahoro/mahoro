@@ -1,40 +1,55 @@
+<style>
+#slides, #slides .ws_images {
+  width:  <%= @setting[:width] %>px;
+  height: <%= @setting[:height] %>px;
+}
+</style>
+
 <%= stylesheet_link_tag "slides" %>
 
 <div id="slides">
 	<div class="ws_images">
     <% @slides.each_with_index do |slide, i| %>
-      <%= link_to slide.link,
-                  image_fu(slide.image, "960x360", :id => "wows#{i}") %>
+      <%= link_to image_fu(slide.image,
+                  "#{@setting[:width]}x#{@setting[:height]}",
+                  :id     => "wows#{i}",
+                  :width  => @setting[:width],
+                  :height => @setting[:height],
+                  :title  => slide.title),
+            slide.link %>
     <% end %>
   </div>
 
   <div class="ws_bullets">
     <div>
       <% @slides.each_with_index do |slide, i| %>
-        <%= link_to "#wows#{i}", image_fu(slide.image, "90x90") %>
+        <%= link_to image_fu(slide.image, "90x90"), "#wows#{i}" %>
       <% end %>
     </div>
   </div>
-	<div class="ws_shadow"></div>
+	<div class="ws_shadow">
+    <%= image_tag "slides/shadow.png", :width => @setting[:width] %>
+  </div>
 </div>
 
+<%= javascript_include_tag "jquery" %>
 <%= javascript_include_tag "slides" %>
 <% javascript_tag do -%>
 jQuery("#slides").wowSlider({
-  effect:       "stack",
+  effect:       "<%= @setting[:effect] %>",
   prev:         "",
   next:         "",
-  duration:     10*100,
-  delay:        50*100,
-  outWidth:     960,
-  outHeight:    360,
-  width:        960,
-  height:       360,
-  autoPlay:     true,
-  stopOnHover:  true,
-  loop:         true,
-  bullets:      true,
-  caption:      true,
-  controls:     true
+  duration:     <%= @setting[:duration] %>,
+  delay:        <%= @setting[:delay] %>,
+  outWidth:     <%= @setting[:width] %>,
+  outHeight:    <%= @setting[:height] %>,
+  width:        <%= @setting[:width] %>,
+  height:       <%= @setting[:height] %>,
+  autoPlay:     <%= @setting[:autoplay] %>,
+  stopOnHover:  <%= @setting[:stop_on_hover] %>,
+  loop:         <%= @setting[:loop] %>,
+  bullets:      <%= @setting[:bullets] %>,
+  caption:      <%= @setting[:caption] %>,
+  controls:     <%= @setting[:controls] %>
 });
 <% end -%>
