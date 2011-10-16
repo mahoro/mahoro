@@ -25,11 +25,12 @@
       <% end %>
     </div>
   </div>
+  <% if @setting[:shadow] -%>
 	<div class="ws_shadow">
     <%= image_tag "slides/shadow.png", :width => @setting[:width] %>
   </div>
+  <% end -%>
 </div>
-
 <%= javascript_include_tag "jquery" %>
 <%= javascript_include_tag "slides" %>
 <% javascript_tag do -%>

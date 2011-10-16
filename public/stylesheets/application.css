@@ -30,33 +30,48 @@ a:hover {
   -moz-box-shadow:    2px 3px 3px 1px rgba(0, 0, 0, 0.3);
 
   background-color: #fff;
-  background: url(../images/bg.png) bottom left #fff;
-  background-repeat: no-repeat;
-  width:            820px;
+  background:       url(/images/bg.png) no-repeat bottom left #fff;
+  width:            900px;
   margin:           0 auto;
   margin-bottom:    30px;
-  padding:          20px 40px 10px 40px;
   margin-top:       -5px;
 }
 
 #header {
-  height:        74px;
-  border-bottom: 3px solid #000;
+  height:        80px;
+  padding:       20px 40px 0px 40px;
+}
+
+#body {
+  padding:    20px 40px 0px 40px;
+  background: url(/images/shadow.png) no-repeat 50% 0;
+}
+
+#slides {
+  position: relative;
+  top: -20px;
+  left: -40px;
+  box-shadow:         0px 3px 8px 0px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow:    0px 3px 8px 0px rgba(0, 0, 0, 0.4);
 }
 
 #footer {
+  padding: 0px 40px 10px 40px;
   margin-top: 10px;
   font-size: 0.7em;
   text-align: center;
 }
 
 #logo {
-  float:         left;
+  float:    left;
+  position: relative;
+  top:      -7px;
 }
 
 #nav {
   position: relative;
-  top:      50px;
+  top:      49px;
 }
 
 #nav ul {
@@ -71,10 +86,11 @@ a:hover {
   background-color: none;
   line-height:      2em;
   padding:          10px;
+  padding-bottom:   15px;
   font-size:        1em;
   text-shadow:      0px 1px 0px #e5e5ee;
   font-weight:      lighter;
-  text-transform:   lowercase
+  text-transform:   lowercase;
 }
 
 #nav li a:hover, #nav li.selected a {
@@ -88,7 +104,7 @@ a:hover {
 
 #nav li {
   float:      left;
-  margin: 0;
+  margin:     0;
   margin-top: -0.5em;
 }
 

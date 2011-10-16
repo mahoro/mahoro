@@ -13,14 +13,15 @@ if defined?(RefinerySetting)
       :height        => 300,
       :width         => 900,
       :effect        => "stack",
-      :duration      => 10,
-      :delay         => 50,
+      :duration      => 1000,
+      :delay         => 5000,
       :autoplay      => true,
       :stop_on_hover => true,
       :loop          => true,
       :bullets       => true,
       :caption       => true,
-      :controls      => true
+      :controls      => true,
+      :shadow        => true
     },
     :destroyable => false,
     :form_value_type => "text_area"
