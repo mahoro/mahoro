@@ -11,8 +11,11 @@ body {
   font-size:        100%;
 }
 
-a {
+#nav a {
   text-decoration: none;
+}
+
+a {
   border: 0;
 }
 
@@ -30,6 +33,18 @@ h1, h2, h3 {
 #body p img {
   float:left;
   margin: 0px 15px 10px 0px;
+}
+
+#body p {
+  clear: both;
+}
+
+#body_content_left {
+  float: left;
+}
+
+#body_content_right {
+  float: right;
 }
 
 td {
