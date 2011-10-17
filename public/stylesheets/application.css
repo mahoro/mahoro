@@ -20,6 +20,22 @@ a:hover {
   text-decoration: underline;
 }
 
+h1, h2, h3 {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+#body p img {
+  float:left;
+  margin: 15px;
+}
+
+td {
+ vertical-align: top;
+}
+
 .clear {
   clear: both
 }
