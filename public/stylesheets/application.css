@@ -56,6 +56,11 @@ a:hover {
   -moz-box-shadow:    0px 3px 8px 0px rgba(0, 0, 0, 0.4);
 }
 
+#slides .ws-title p{
+  margin: 0;
+  max-width: 300px;
+}
+
 #footer {
   padding: 0px 40px 10px 40px;
   margin-top: 10px;

@@ -9,20 +9,21 @@
 
 <div id="slides">
 	<div class="ws_images">
-    <% @slides.each_with_index do |slide, i| %>
+    <% @slides.each_with_index do |slide, i| -%>
       <%= link_to image_fu(slide.image,
-                  "#{@setting[:width]}x#{@setting[:height]}#ne",
+                  "#{@setting[:width]}x#{@setting[:height]}#c",
                   :id     => "wows#{i}",
                   :title  => slide.title),
-            slide.link %>
-    <% end %>
+            slide.link,
+            :id => "awows#{i}" %>
+    <% end -%>
   </div>
 
   <div class="ws_bullets">
     <div>
-      <% @slides.each_with_index do |slide, i| %>
-        <%= link_to image_fu(slide.image, "90x90#ne"), "#wows#{i}" %>
-      <% end %>
+      <% @slides.each_with_index do |slide, i| -%>
+        <%= link_to image_fu(slide.image, "90x90#c"), "#wows#{i}" %>
+      <% end -%>
     </div>
   </div>
   <% if @setting[:shadow] -%>
@@ -32,8 +33,14 @@
   <% end -%>
 </div>
 <%= javascript_include_tag "jquery" %>
+
+
 <%= javascript_include_tag "slides" %>
 <% javascript_tag do -%>
+  <% @slides.each_with_index do |slide, i| -%>
+  <% next if slide.description.blank? -%>
+jQuery("#awows<%= i %>").data("descr", "<%= raw slide.description %>");
+  <% end -%>
 jQuery("#slides").wowSlider({
   effect:       "<%= @setting[:effect] %>",
   prev:         "",

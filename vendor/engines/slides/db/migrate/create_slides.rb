@@ -5,6 +5,7 @@ class CreateSlides < ActiveRecord::Migration
       t.string :title
       t.integer :image_id
       t.string :link
+      t.text :description
       t.integer :position
 
       t.timestamps
