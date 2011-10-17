@@ -29,7 +29,7 @@ h1, h2, h3 {
 
 #body p img {
   float:left;
-  margin: 15px;
+  margin: 0px 15px 10px 0px;
 }
 
 td {
