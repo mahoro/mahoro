@@ -26,11 +26,6 @@ h1, h2, h3 {
   text-transform: uppercase;
 }
 
-#body p img {
-  float:left;
-  margin: 0px 15px 10px 0px;
-}
-
 #body p {
   clear: left;
 }
@@ -54,7 +49,6 @@ td {
   -moz-box-shadow:    2px 3px 3px 1px rgba(0, 0, 0, 0.3);
 
   background-color: #fff;
-  background:       url(/images/bg.png) no-repeat bottom left #fff;
   width:            900px;
   margin:           0 auto;
   margin-bottom:    30px;
@@ -183,13 +177,28 @@ div.last {
 
 /* BLOG AND NEWS */
 
+#body article img {
+  float:left;
+  margin: 5px 15px 10px 0px;
+}
+
+#body article h1 {
+  font-size: 1.5em;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+#body article {
+  text-align: justify;
+}
+
 #body_content_left article {
+  border-bottom: 1px solid #ccc;
   padding: 10px 0 10px 0;
 }
 
 #body_content_left article h3 {
   margin-bottom: 0px;
-  border-bottom: 1px solid #ccc;
 }
 
 #body_content_left article h3 a {
@@ -213,4 +222,11 @@ div.last {
 
 #body_content_left article footer {
   font-size: 0.8em;
+}
+
+.section {
+  float: left;
+  width: 220px;
+  height: 200px;
+  margin-right: 32px;
 }

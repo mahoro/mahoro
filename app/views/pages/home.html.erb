@@ -1,10 +1,19 @@
 <%= render_slides %>
+
 <div class="infobox section">
   <h3>Something Here</h3>
 </div>
 
+<%
+  news_item = NewsItem.find :first
+  news_item ||= NewsItem.new :title => "No News",
+                             :body => "No news to display..."
+-%>
 <div class="infobox section">
-  <h3>Something Here</h3>
+  <h3><%= news_item.title %></h3>
+    <%= truncate news_item.body, :length => 440,
+:omission => " ... <small>#{link_to t('.read_more'), news_item_url(news_item)}</small>",
+:preserve_html_tags => true %>
 </div>
 
 <div class="infobox section last">

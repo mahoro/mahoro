@@ -10,7 +10,7 @@
         </p>
         <section class='clearfix'>
         <%= truncate  item.body, :length => 200,
-                      :omission => " ... #{link_to t('.read_more'), news_item_url(item)}",
+                      :omission => " ... <small>#{link_to t('.read_more'), news_item_url(item)}</small>",
                       :preserve_html_tags => true %>
         </section>
       </article>
