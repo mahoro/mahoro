@@ -13,6 +13,8 @@ body {
 
 a {
   border: 0;
+  color: #399DD8;
+  text-decoration: none;
 }
 
 a:hover {
@@ -222,6 +224,11 @@ div.last {
 
 #body_content_left article footer {
   font-size: 0.8em;
+}
+
+#body_content_left article.smaller {
+  font-size: 0.8em;
+  border: 0;
 }
 
 .section {
