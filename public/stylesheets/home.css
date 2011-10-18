@@ -2,25 +2,5 @@
   float: left;
   width: 220px;
   height: 200px;
-  border: 1px solid #ccc;
-  padding: 15px;
-  border-radius: 5px;
-  font-size: 0.8em;
-  background-color: #fff;
-  text-align: justify;
   margin-right: 32px;
-}
-
-.section h3 {
-  text-align: center;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 7px;
-}
-
-.section p {
-  margin-right: 0;
-}
-
-.last {
-  margin: 0;
 }
