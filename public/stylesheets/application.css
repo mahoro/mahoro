@@ -28,8 +28,16 @@ h1, h2, h3 {
   text-transform: uppercase;
 }
 
-#body p {
-  clear: left;
+textarea, input, label {
+  font-size: 1em;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+textarea, input {
+  background-color: #fff;
+  padding: 5px;
+  border: 1px solid #ccc;
 }
 
 #body_content_right {
@@ -41,7 +49,7 @@ td {
  vertical-align: top;
 }
 
-.clear {
+.clear, article.blog_comment_message, aside#comments h2 {
   clear: both
 }
 
@@ -196,7 +204,8 @@ div.last {
 
 #body_content_left article {
   border-bottom: 1px solid #ccc;
-  padding: 10px 0 10px 0;
+  padding: 0px 0 10px 0;
+  margin-bottom: 15px;
 }
 
 #body_content_left article h3 {
@@ -213,7 +222,7 @@ div.last {
   color: #399DD8;
 }
 
-#body_content_left article p {
+#body_content_left article p, article#blog_post {
   margin-top: 0px;
   margin-bottom: 0px;
 }
@@ -227,9 +236,10 @@ div.last {
   font-size: 0.8em;
 }
 
-#body_content_left article.smaller {
+#body_content_left article.smaller, aside#comments {
   font-size: 0.8em;
   border: 0;
+  margin: 0;
 }
 
 .section {
@@ -238,3 +248,33 @@ div.last {
   height: 200px;
   margin-right: 32px;
 }
+
+#body article.blog_comment_message img, nav#next_prev_article {
+  margin-top: 0px;
+}
+
+#body article.blog_comment_message {
+  padding-bottom: 15px;
+}
+
+#comments .form_left, #comments .message_field {
+  float: left;
+}
+
+#comments .message_field {
+  margin-left: 10px;
+}
+
+#comments .form_left .field {
+  text-align: right;
+}
+
+#comments textarea {
+  width: 595px;
+  height: 82px;
+}
+
+input#blog_comment_email, input#blog_comment_name {
+  width: 150px;
+}
+
