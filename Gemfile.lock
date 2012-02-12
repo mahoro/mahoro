@@ -64,6 +64,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.16)
     orm_adapter (0.0.5)
+    pg (0.13.0)
     polyglot (0.3.2)
     rack (1.2.3)
     rack-cache (1.0.2)
@@ -162,6 +163,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  pg
   refinerycms (~> 1.0.4)
   refinerycms-blog (~> 1.6.1)
   refinerycms-i18n (~> 1.0.0)
