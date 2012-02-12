@@ -21,4 +21,4 @@ production:
   pool: 5
   database: mahoro_cms
   username: postgres
-  password: <%= puts "DB Password:"; $stdin.gets.strip %>
+  password: <%= `pg_password` rescue nil %>

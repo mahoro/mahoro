@@ -61,4 +61,5 @@ gem 'refinerycms-i18n',         '~> 1.0.0'
 # END USER DEFINED
 
 gem 'pg', :require => 'pg', :group => :production
+gem 'nutshell', :require => false
 gem 'refinerycms-slides', '1.0', :path => 'vendor/engines'
