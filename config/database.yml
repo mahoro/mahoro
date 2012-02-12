@@ -16,6 +16,9 @@ test:
   timeout: 5000
 
 production:
-  adapter: postgres
+  adapter: postgresql
+  encoding: unicode
   pool: 5
-  timeout: 5000
+  database: mahoro_cms
+  username: postgres
+  password: <%= $stdin.gets.strip %>
