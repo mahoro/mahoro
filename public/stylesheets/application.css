@@ -102,6 +102,10 @@ td {
   top:      -7px;
 }
 
+.no-border {
+ border: 0;
+}
+
 /* TOP NAVIGATION */
 
 #nav {
